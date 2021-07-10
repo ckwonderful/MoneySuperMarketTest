@@ -1,0 +1,9 @@
+C:\code\MoneySuperMarketTest\BasketService\obj\Debug\netcoreapp3.1\MoneySuperMarketTest.Service.csproj.AssemblyReference.cache
+C:\code\MoneySuperMarketTest\BasketService\obj\Debug\netcoreapp3.1\MoneySuperMarketTest.Service.AssemblyInfoInputs.cache
+C:\code\MoneySuperMarketTest\BasketService\obj\Debug\netcoreapp3.1\MoneySuperMarketTest.Service.AssemblyInfo.cs
+C:\code\MoneySuperMarketTest\BasketService\obj\Debug\netcoreapp3.1\MoneySuperMarketTest.Service.csproj.CoreCompileInputs.cache
+C:\code\MoneySuperMarketTest\BasketService\bin\Debug\netcoreapp3.1\MoneySuperMarketTest.Service.deps.json
+C:\code\MoneySuperMarketTest\BasketService\bin\Debug\netcoreapp3.1\MoneySuperMarketTest.Service.dll
+C:\code\MoneySuperMarketTest\BasketService\bin\Debug\netcoreapp3.1\MoneySuperMarketTest.Service.pdb
+C:\code\MoneySuperMarketTest\BasketService\obj\Debug\netcoreapp3.1\MoneySuperMarketTest.Service.dll
+C:\code\MoneySuperMarketTest\BasketService\obj\Debug\netcoreapp3.1\MoneySuperMarketTest.Service.pdb

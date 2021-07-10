@@ -12,4 +12,8 @@
     <PackageReference Include="NUnitTestAdapter" Version="2.3.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BasketService\MoneySuperMarketTest.Service.csproj" />
+  </ItemGroup>
+
 </Project>

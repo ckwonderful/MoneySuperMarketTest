@@ -207,3 +207,5 @@ C:\code\MoneySuperMarketTest\MoneySuperMarketTest.Service.Tests\obj\Debug\netcor
 C:\code\MoneySuperMarketTest\MoneySuperMarketTest.Service.Tests\obj\Debug\netcoreapp3.1\MoneySuperMarketTest.Service.Tests.dll
 C:\code\MoneySuperMarketTest\MoneySuperMarketTest.Service.Tests\obj\Debug\netcoreapp3.1\MoneySuperMarketTest.Service.Tests.pdb
 C:\code\MoneySuperMarketTest\MoneySuperMarketTest.Service.Tests\obj\Debug\netcoreapp3.1\MoneySuperMarketTest.Service.Tests.genruntimeconfig.cache
+C:\code\MoneySuperMarketTest\MoneySuperMarketTest.Service.Tests\bin\Debug\netcoreapp3.1\MoneySuperMarketTest.Service.dll
+C:\code\MoneySuperMarketTest\MoneySuperMarketTest.Service.Tests\bin\Debug\netcoreapp3.1\MoneySuperMarketTest.Service.pdb

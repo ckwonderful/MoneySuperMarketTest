@@ -1,9 +1,7 @@
-﻿using System;
+﻿using FluentAssertions;
+using NUnit.Framework;
 using System.Collections.Generic;
 using System.Linq;
-using Castle.Components.DictionaryAdapter;
-using FluentAssertions;
-using NUnit.Framework;
 
 namespace MoneySuperMarketTest.Service.Tests
 {
@@ -25,7 +23,7 @@ namespace MoneySuperMarketTest.Service.Tests
                 Milk
             };
 
-            var sut = new BasketService(new List<IOffer>());
+            var sut = new BasketService.BasketService(new List<IOffer>());
             var result = sut.CalculateTotal(products);
 
             result.Should().Be(2.95m);
@@ -42,7 +40,7 @@ namespace MoneySuperMarketTest.Service.Tests
                 Bread
             };
 
-            var sut = new BasketService(new List<IOffer>
+            var sut = new BasketService.BasketService(new List<IOffer>
             {
                 new PercentageOffer() { OfferProduct = Butter, DiscountProduct = Bread, NumberOfOfferProductsForDiscount = 2, DiscountValue = 0.5m }
             });
@@ -62,7 +60,7 @@ namespace MoneySuperMarketTest.Service.Tests
                 Milk
             };
 
-            var sut = new BasketService(new List<IOffer>
+            var sut = new BasketService.BasketService(new List<IOffer>
             {
                 new ValueOffer() { OfferProduct = Milk, DiscountProduct = Milk, NumberOfOfferProductsForDiscount = 3, DiscountValue = 0 }
             });
@@ -89,7 +87,7 @@ namespace MoneySuperMarketTest.Service.Tests
                 Milk
             };
 
-            var sut = new BasketService(new List<IOffer>
+            var sut = new BasketService.BasketService(new List<IOffer>
             {
                 new PercentageOffer() { OfferProduct = Butter, DiscountProduct = Bread, NumberOfOfferProductsForDiscount = 2, DiscountValue = 0.5m }, 
                 new ValueOffer() { OfferProduct = Milk, DiscountProduct = Milk, NumberOfOfferProductsForDiscount = 3, DiscountValue = 0 }
@@ -100,84 +98,9 @@ namespace MoneySuperMarketTest.Service.Tests
         }
     }
 
-    public class Product
-    {
-        public string Name { get; set; }
-        public decimal Cost { get; set; }
-    }
+    
 
-    public class BasketService
-    {
-        private readonly List<IOffer> _offers;
+    
 
-        public BasketService(List<IOffer> offers)
-        {
-            _offers = offers;
-        }
-
-        public decimal CalculateTotal(List<Product> products)
-        {
-            decimal offerSavings = 0;
-
-            foreach (var offer in _offers)
-            {
-                offerSavings += offer.ApplyDiscount(products);
-            }
-
-            return products.Sum(x => x.Cost) - offerSavings;
-        }
-    }
-
-    public class PercentageOffer : Offer
-    {
-        protected override decimal CalculateDiscount(Product product)
-        {
-            return product.Cost * DiscountValue;
-        }
-        
-    }
-
-    public class ValueOffer : Offer
-    {
-        protected override decimal CalculateDiscount(Product product)
-        {
-            return product.Cost - DiscountValue;
-        }
-    }
-
-    public abstract class Offer: IOffer
-    {
-        public Product OfferProduct { get; set; }
-        public int NumberOfOfferProductsForDiscount { get; set; }
-        public Product DiscountProduct { get; set; }
-        public decimal DiscountValue { get; set; }
-        public decimal ApplyDiscount(List<Product> products)
-        {
-            decimal discountValue = 0;
-
-            var numberOfOfferProductsInBasket = products.Count(x => x.Name == OfferProduct.Name);
-            var numberOfDiscountProducts = numberOfOfferProductsInBasket / NumberOfOfferProductsForDiscount;
-
-            var productsToApplyDiscount = products.Where(x => x.Name == DiscountProduct.Name)
-                .Take(numberOfDiscountProducts);
-
-            foreach (var product in productsToApplyDiscount)
-            {
-                discountValue += CalculateDiscount(product);
-            }
-
-            return discountValue;
-        }
-        protected abstract decimal CalculateDiscount(Product products);
-    }
-
-    public interface IOffer
-    {
-        Product OfferProduct { get; set; }
-        Product DiscountProduct { get; set; }
-        int NumberOfOfferProductsForDiscount { get; set; }
-        decimal DiscountValue { get; set; }
-
-        decimal ApplyDiscount(List<Product> products);
-    }
+    
 }

@@ -1110,6 +1110,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
+      },
+      "MoneySuperMarketTest.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/MoneySuperMarketTest.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MoneySuperMarketTest.Service.dll": {}
+        }
       }
     }
   },
@@ -4576,12 +4586,18 @@
         "system.xml.xmldocument.4.3.0.nupkg.sha512",
         "system.xml.xmldocument.nuspec"
       ]
+    },
+    "MoneySuperMarketTest.Service/1.0.0": {
+      "type": "project",
+      "path": "../BasketService/MoneySuperMarketTest.Service.csproj",
+      "msbuildProject": "../BasketService/MoneySuperMarketTest.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "FluentAssertions >= 5.10.3",
       "Microsoft.NET.Test.Sdk >= 16.10.0",
+      "MoneySuperMarketTest.Service >= 1.0.0",
       "Moq >= 4.16.1",
       "NUnit >= 3.13.2",
       "NUnitTestAdapter >= 2.3.0"
@@ -4613,7 +4629,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\code\\MoneySuperMarketTest\\BasketService\\MoneySuperMarketTest.Service.csproj": {
+              "projectPath": "C:\\code\\MoneySuperMarketTest\\BasketService\\MoneySuperMarketTest.Service.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
