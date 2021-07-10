@@ -70,6 +70,34 @@ namespace MoneySuperMarketTest.Service.Tests
 
             result.Should().Be(3.45m);
         }
+
+        [Test]
+        public void CalculateTheCorrectTotalWhenThereAreMultipleOffers()
+        {
+            var products = new List<Product>
+            {
+                Butter,
+                Butter,
+                Bread,
+                Milk,
+                Milk,
+                Milk,
+                Milk,
+                Milk,
+                Milk,
+                Milk,
+                Milk
+            };
+
+            var sut = new BasketService(new List<IOffer>
+            {
+                new PercentageOffer() { OfferProduct = Butter, DiscountProduct = Bread, NumberOfOfferProductsForDiscount = 2, DiscountValue = 0.5m }, 
+                new ValueOffer() { OfferProduct = Milk, DiscountProduct = Milk, NumberOfOfferProductsForDiscount = 3, DiscountValue = 0 }
+            });
+            var result = sut.CalculateTotal(products);
+
+            result.Should().Be(9m);
+        }
     }
 
     public class Product
