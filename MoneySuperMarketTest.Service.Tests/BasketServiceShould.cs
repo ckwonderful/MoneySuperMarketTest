@@ -44,11 +44,31 @@ namespace MoneySuperMarketTest.Service.Tests
 
             var sut = new BasketService(new List<IOffer>
             {
-                new Offer { OfferProduct = Butter, DiscountProduct = Bread, NumberOfOfferProductsForDiscount = 2, DiscountValue = 0.5m }
+                new PercentageOffer() { OfferProduct = Butter, DiscountProduct = Bread, NumberOfOfferProductsForDiscount = 2, DiscountValue = 0.5m }
             });
             var result = sut.CalculateTotal(products);
 
             result.Should().Be(3.1m);
+        }
+
+        [Test]
+        public void CalculateTheCorrectTotalWhenThereIsAFreeProductOffer()
+        {
+            var products = new List<Product>
+            {
+                Milk,
+                Milk,
+                Milk,
+                Milk
+            };
+
+            var sut = new BasketService(new List<IOffer>
+            {
+                new ValueOffer() { OfferProduct = Milk, DiscountProduct = Milk, NumberOfOfferProductsForDiscount = 3, DiscountValue = 0 }
+            });
+            var result = sut.CalculateTotal(products);
+
+            result.Should().Be(3.45m);
         }
     }
 
@@ -69,29 +89,58 @@ namespace MoneySuperMarketTest.Service.Tests
 
         public decimal CalculateTotal(List<Product> products)
         {
+            decimal offerSavings = 0;
+
             foreach (var offer in _offers)
             {
-                var numberOfOfferProductsInBasket = products.Count(x => x.Name == offer.OfferProduct.Name);
-                var numberOfDiscountProducts = numberOfOfferProductsInBasket / offer.NumberOfOfferProductsForDiscount;
-
-                var productsToApplyDiscount = products.Where(x => x.Name == offer.DiscountProduct.Name)
-                    .Take(numberOfDiscountProducts);
-                foreach (var product in productsToApplyDiscount)
-                {
-                    product.Cost *= offer.DiscountValue;
-                }
+                offerSavings += offer.ApplyDiscount(products);
             }
 
-            return products.Sum(x => x.Cost);
+            return products.Sum(x => x.Cost) - offerSavings;
         }
     }
 
-    public class Offer: IOffer
+    public class PercentageOffer : Offer
+    {
+        protected override decimal CalculateDiscount(Product product)
+        {
+            return product.Cost * DiscountValue;
+        }
+        
+    }
+
+    public class ValueOffer : Offer
+    {
+        protected override decimal CalculateDiscount(Product product)
+        {
+            return product.Cost - DiscountValue;
+        }
+    }
+
+    public abstract class Offer: IOffer
     {
         public Product OfferProduct { get; set; }
         public int NumberOfOfferProductsForDiscount { get; set; }
         public Product DiscountProduct { get; set; }
         public decimal DiscountValue { get; set; }
+        public decimal ApplyDiscount(List<Product> products)
+        {
+            decimal discountValue = 0;
+
+            var numberOfOfferProductsInBasket = products.Count(x => x.Name == OfferProduct.Name);
+            var numberOfDiscountProducts = numberOfOfferProductsInBasket / NumberOfOfferProductsForDiscount;
+
+            var productsToApplyDiscount = products.Where(x => x.Name == DiscountProduct.Name)
+                .Take(numberOfDiscountProducts);
+
+            foreach (var product in productsToApplyDiscount)
+            {
+                discountValue += CalculateDiscount(product);
+            }
+
+            return discountValue;
+        }
+        protected abstract decimal CalculateDiscount(Product products);
     }
 
     public interface IOffer
@@ -100,5 +149,7 @@ namespace MoneySuperMarketTest.Service.Tests
         Product DiscountProduct { get; set; }
         int NumberOfOfferProductsForDiscount { get; set; }
         decimal DiscountValue { get; set; }
+
+        decimal ApplyDiscount(List<Product> products);
     }
 }
