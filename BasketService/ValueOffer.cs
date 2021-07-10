@@ -6,7 +6,7 @@ namespace MoneySuperMarketTest.Service
 {
     public class ValueOffer : Offer
     {
-        protected override decimal CalculateDiscount(Product product)
+        protected override decimal CalculateSingleDiscount(Product product)
         {
             return product.Cost - DiscountValue;
         }
