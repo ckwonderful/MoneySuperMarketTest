@@ -1,0 +1,84 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\code\\MoneySuperMarketTest\\MoneySuperMarketTest.Service.Tests\\MoneySuperMarketTest.Service.Tests.csproj": {}
+  },
+  "projects": {
+    "C:\\code\\MoneySuperMarketTest\\MoneySuperMarketTest.Service.Tests\\MoneySuperMarketTest.Service.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\code\\MoneySuperMarketTest\\MoneySuperMarketTest.Service.Tests\\MoneySuperMarketTest.Service.Tests.csproj",
+        "projectName": "MoneySuperMarketTest.Service.Tests",
+        "projectPath": "C:\\code\\MoneySuperMarketTest\\MoneySuperMarketTest.Service.Tests\\MoneySuperMarketTest.Service.Tests.csproj",
+        "packagesPath": "C:\\Users\\kelly\\.nuget\\packages\\",
+        "outputPath": "C:\\code\\MoneySuperMarketTest\\MoneySuperMarketTest.Service.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\kelly\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[5.10.3, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.10.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.16.1, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.2, )"
+            },
+            "NUnitTestAdapter": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
