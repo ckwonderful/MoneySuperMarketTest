@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using FluentAssertions;
 using NUnit.Framework;
 
@@ -35,7 +36,7 @@ namespace MoneySuperMarketTest.Service.Tests
     {
         public decimal CalculateTotal(List<Product> products)
         {
-            throw new NotImplementedException();
+            return products.Sum(x => x.Cost);
         }
     }
 }
