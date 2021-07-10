@@ -11,24 +11,24 @@ namespace MoneySuperMarketTest.Service
         public int NumberOfOfferProductsForDiscount { get; set; }
         public Product DiscountProduct { get; set; }
         public decimal DiscountValue { get; set; }
-        public decimal ApplyDiscount(List<Product> products)
+        public decimal CalculateFullDiscount(List<Product> products)
         {
             decimal discountValue = 0;
 
             var numberOfOfferProductsInBasket = products.Count(x => x.Name == OfferProduct.Name);
             var numberOfDiscountProducts = numberOfOfferProductsInBasket / NumberOfOfferProductsForDiscount;
-
+            
             var productsToApplyDiscount = products.Where(x => x.Name == DiscountProduct.Name)
                 .Take(numberOfDiscountProducts);
 
             foreach (var product in productsToApplyDiscount)
             {
-                discountValue += CalculateDiscount(product);
+                discountValue += CalculateSingleDiscount(product);
             }
 
             return discountValue;
         }
-        protected abstract decimal CalculateDiscount(Product products);
+        protected abstract decimal CalculateSingleDiscount(Product products);
     }
     
 }

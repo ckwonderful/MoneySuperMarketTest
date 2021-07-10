@@ -102,6 +102,7 @@ C:\Users\kelly\source\repos\MoneySuperMarketTest.BasketService.Tests\bin\Debug\n
 C:\Users\kelly\source\repos\MoneySuperMarketTest.BasketService.Tests\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\kelly\source\repos\MoneySuperMarketTest.BasketService.Tests\obj\Debug\netcoreapp3.1\MoneySuperMarketTest.Service.Tests.csproj.CopyComplete
 C:\Users\kelly\source\repos\MoneySuperMarketTest.BasketService.Tests\obj\Debug\netcoreapp3.1\MoneySuperMarketTest.Service.Tests.genruntimeconfig.cache
+C:\code\MoneySuperMarketTest\MoneySuperMarketTest.Service.Tests\bin\Debug\netcoreapp3.1\testhost.dll
 C:\code\MoneySuperMarketTest\MoneySuperMarketTest.Service.Tests\bin\Debug\netcoreapp3.1\NUnit.VisualStudio.TestAdapter.dll
 C:\code\MoneySuperMarketTest\MoneySuperMarketTest.Service.Tests\bin\Debug\netcoreapp3.1\Mono.Cecil.dll
 C:\code\MoneySuperMarketTest\MoneySuperMarketTest.Service.Tests\bin\Debug\netcoreapp3.1\Mono.Cecil.Mdb.dll
@@ -111,7 +112,6 @@ C:\code\MoneySuperMarketTest\MoneySuperMarketTest.Service.Tests\bin\Debug\netcor
 C:\code\MoneySuperMarketTest\MoneySuperMarketTest.Service.Tests\bin\Debug\netcoreapp3.1\nunit.core.interfaces.dll
 C:\code\MoneySuperMarketTest\MoneySuperMarketTest.Service.Tests\bin\Debug\netcoreapp3.1\nunit.util.dll
 C:\code\MoneySuperMarketTest\MoneySuperMarketTest.Service.Tests\bin\Debug\netcoreapp3.1\testhost.exe
-C:\code\MoneySuperMarketTest\MoneySuperMarketTest.Service.Tests\bin\Debug\netcoreapp3.1\testhost.dll
 C:\code\MoneySuperMarketTest\MoneySuperMarketTest.Service.Tests\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.PlatformAbstractions.dll
 C:\code\MoneySuperMarketTest\MoneySuperMarketTest.Service.Tests\bin\Debug\netcoreapp3.1\MoneySuperMarketTest.Service.Tests.deps.json
 C:\code\MoneySuperMarketTest\MoneySuperMarketTest.Service.Tests\bin\Debug\netcoreapp3.1\MoneySuperMarketTest.Service.Tests.runtimeconfig.json
@@ -199,6 +199,8 @@ C:\code\MoneySuperMarketTest\MoneySuperMarketTest.Service.Tests\bin\Debug\netcor
 C:\code\MoneySuperMarketTest\MoneySuperMarketTest.Service.Tests\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 C:\code\MoneySuperMarketTest\MoneySuperMarketTest.Service.Tests\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
 C:\code\MoneySuperMarketTest\MoneySuperMarketTest.Service.Tests\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\code\MoneySuperMarketTest\MoneySuperMarketTest.Service.Tests\bin\Debug\netcoreapp3.1\MoneySuperMarketTest.Service.dll
+C:\code\MoneySuperMarketTest\MoneySuperMarketTest.Service.Tests\bin\Debug\netcoreapp3.1\MoneySuperMarketTest.Service.pdb
 C:\code\MoneySuperMarketTest\MoneySuperMarketTest.Service.Tests\obj\Debug\netcoreapp3.1\MoneySuperMarketTest.Service.Tests.csproj.AssemblyReference.cache
 C:\code\MoneySuperMarketTest\MoneySuperMarketTest.Service.Tests\obj\Debug\netcoreapp3.1\MoneySuperMarketTest.Service.Tests.AssemblyInfoInputs.cache
 C:\code\MoneySuperMarketTest\MoneySuperMarketTest.Service.Tests\obj\Debug\netcoreapp3.1\MoneySuperMarketTest.Service.Tests.AssemblyInfo.cs
@@ -207,5 +209,3 @@ C:\code\MoneySuperMarketTest\MoneySuperMarketTest.Service.Tests\obj\Debug\netcor
 C:\code\MoneySuperMarketTest\MoneySuperMarketTest.Service.Tests\obj\Debug\netcoreapp3.1\MoneySuperMarketTest.Service.Tests.dll
 C:\code\MoneySuperMarketTest\MoneySuperMarketTest.Service.Tests\obj\Debug\netcoreapp3.1\MoneySuperMarketTest.Service.Tests.pdb
 C:\code\MoneySuperMarketTest\MoneySuperMarketTest.Service.Tests\obj\Debug\netcoreapp3.1\MoneySuperMarketTest.Service.Tests.genruntimeconfig.cache
-C:\code\MoneySuperMarketTest\MoneySuperMarketTest.Service.Tests\bin\Debug\netcoreapp3.1\MoneySuperMarketTest.Service.dll
-C:\code\MoneySuperMarketTest\MoneySuperMarketTest.Service.Tests\bin\Debug\netcoreapp3.1\MoneySuperMarketTest.Service.pdb

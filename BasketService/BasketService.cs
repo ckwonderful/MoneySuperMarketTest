@@ -20,7 +20,7 @@ namespace BasketService
 
             foreach (var offer in _offers)
             {
-                offerSavings += offer.ApplyDiscount(products);
+                offerSavings += offer.CalculateFullDiscount(products);
             }
 
             return products.Sum(x => x.Cost) - offerSavings;

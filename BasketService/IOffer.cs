@@ -11,6 +11,6 @@ namespace MoneySuperMarketTest.Service
         int NumberOfOfferProductsForDiscount { get; set; }
         decimal DiscountValue { get; set; }
 
-        decimal ApplyDiscount(List<Product> products);
+        decimal CalculateFullDiscount(List<Product> products);
     }
 }
